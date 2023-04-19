@@ -10,6 +10,7 @@ public class Forest
 	{
 		HashMap<String, Foliage> folMap = new HashMap<>();
 		folMap.put("Tree", new Tree());
+		folMap.put("Bush", new Bush());
 		return folMap;
 	}
 
