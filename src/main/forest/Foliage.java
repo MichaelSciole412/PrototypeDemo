@@ -1,7 +1,5 @@
 package forest;
 
-import java.lang.Cloneable;
-
 /**
  * Foliage.java Abstract Class.
  * Allows the Forest class to create
