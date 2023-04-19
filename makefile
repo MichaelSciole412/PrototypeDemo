@@ -14,16 +14,16 @@ default:
 	@echo "________ make clean ; make compile ; make test ; make check"
 
 compile: $(JUNIT5_JAR)
-	javac $(JFLAGS) -cp .:$(JUNIT5_JAR) src/**/*.java
+	javac $(JFLAGS) -cp .:$(JUNIT5_JAR) src/**/**/*.java
 
 test: $(JUNIT5_JAR)
 	java -cp bin:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path 
 
-demo: bin/client/Demo.class
-	java -cp .:bin client/Demo
+demo: bin/forest/Demo.class
+	java -cp .:bin forest/Demo
 
 check: styles.xml 
-	java11 $(CKSTYLE_COMMAND) -c ./styles.xml src/**/*.java
+	java11 $(CKSTYLE_COMMAND) -c ./styles.xml src/**/**/*.java
 
 clean:
 	rm -f ./bin/**/*.class
