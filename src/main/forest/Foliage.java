@@ -1,6 +1,6 @@
 package forest;
 
-import Java.lang.Clonable;
+import java.lang.Cloneable;
 
 /**
  * Foliage.java Abstract Class.
@@ -10,7 +10,7 @@ import Java.lang.Clonable;
  * @version 1.0
  **/
 
-abstract class Foliage implements Clonable
+abstract class Foliage implements Cloneable
 {
 	protected String foliageName;
 
@@ -21,6 +21,7 @@ abstract class Foliage implements Clonable
  * Allows classes extending Foliage to
  * have their objects cloned rather than
  * using the new operator
+ * @return Object
  **/
 	public Object clone()
 	{
